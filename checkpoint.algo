@@ -1,0 +1,53 @@
+PROCEDURE remplir(y:INTEGER;var tab: ARRAY_OF INTEGER)
+VAR
+    i:INTEGER;
+BEGIN
+    Read (y)
+    FOR i FROM 0 TO n  DO
+        Read (tab[i]);
+    END_FOR
+END
+PROCEDURE dot_product(tab,tab2: ARRAY_OF INTEGER, VAR z:integer)
+VAR
+    i:INTEGER
+    s:INTEGER:=0;
+BEGIN
+    FOR i FROM 0 TO tab.length  DO
+        s:=tab1[i]*tab2[i]
+        z:=z+s;
+    END_FOR
+    write(z);
+END
+
+// FUNCTION dot_product(tab,tab2: ARRAY_OF INTEGER) : INTEGER
+// VAR
+//     i:INTEGER
+//     s,z:INTEGER:=0
+// BEGIN
+    
+//     FOR i FROM 0 TO tab.length  DO
+//         s:=tab1[i]*tab2[i]
+//         z:=z+s;
+//     END_FOR
+//     RETURN(z);
+
+// END 
+
+ALGORITHM checkpointproc
+VAR
+    tab : ARRAY_OF INTEGER  [];
+    tab2 : ARRAY_OF INTEGER[];
+    ps: INTEGER
+    z:INTEGER:=0
+BEGIN
+    remplir(v1,tab);
+    remplir(v2,tab2);
+    dot_product(tab,tab2,z)
+    // ps:=dot_product(tab,tab2,z)
+    IF (z!=0) THEN
+        write('non orthogonale')
+    ELSE
+        write('orthogonale')
+    END_IF
+
+END
